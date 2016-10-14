@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED. Released for free under the Creative Commons Attribution License
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<link href="{{ url_for('static', filename='default.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url_for('static', filename='fonts.css') }}" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!-- mpict0: generic bokeh links in head tag. Currently not used - inserted directly in the template -->
+
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.2.min.css" type="text/css" />
+	<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.2.min.css" type="text/css" />
+    <script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.2.min.js"></script><script type="text/javascript">    Bokeh.set_log_level("info");        
+    </script>
+	<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.2.min.js"></script>
+</head>
+<body>
+
+<div id="page-wrapper">
+	<div id="page" class="container">
+		<div class="title">
+			<h2>Cryptoinvestor app</h2>
+		</div>
+		<p> Your trusty sidekick in the world of Bitcoin trading </p>
+		<p> (in development)</p>
+	</div>
+</div>
+<!--
+        <style>
+          html {
+            width: 100%;
+            height: 100%;
+          }
+          body {
+            width: 90%;
+            height: 100%;
+            margin: auto;
+          }
+        </style>
+-->   
+        <div class="general-info">
+			<center> <h4> BTC last daily price on different cryptocurrency exchanges <br> Size of the circle represents daily trading volume </h4> </center>
+        </div>
+		<center>
+		<div class='plots'>
+		
+<div class="bk-root">
+    <div class="plotdiv" id="286f89be-5401-4489-ae52-4686b0aea803"></div>
+</div>
+<script type="text/javascript">
+    Bokeh.$(function() {
+    Bokeh.safely(function() {
+        var docs_json = {"f0155b88-0dca-4f1e-9667-f3402f602991":{"roots":{"references":[{"attributes":{"bottom_units":"screen","fill_alpha":{"value":0.5},"fill_color":{"value":"lightgrey"},"left_units":"screen","level":"overlay","line_alpha":{"value":1.0},"line_color":{"value":"black"},"line_dash":[4,4],"line_width":{"value":2},"plot":null,"render_mode":"css","right_units":"screen","top_units":"screen"},"id":"682fac4d-7716-43c0-b892-538a4b35e703","type":"BoxAnnotation"},{"attributes":{},"id":"af31be5c-e82a-4efc-8a4f-c1f1e8a0dbde","type":"BasicTickFormatter"},{"attributes":{"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"}},"id":"9f1b6567-051b-4713-9f57-32cfb508ae6e","type":"SaveTool"},{"attributes":{"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"}},"id":"a7af8314-6bc0-4589-87cd-7130e349168d","type":"ResetTool"},{"attributes":{"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"}},"id":"243a6dc9-d0e4-4f45-ae9b-60dd2a65522a","type":"CrosshairTool"},{"attributes":{},"id":"713984e5-4249-4519-a73b-c9401853a716","type":"BasicTickFormatter"},{"attributes":{"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"},"ticker":{"id":"52007f7a-6176-4112-8aa2-bec84735dfd7","type":"BasicTicker"}},"id":"e5890c81-7930-4c29-a9d2-6a9b2d31570a","type":"Grid"},{"attributes":{},"id":"b21f027a-6df5-4346-bdac-6e219b892183","type":"ToolEvents"},{"attributes":{"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"}},"id":"aba15120-d510-4056-9d24-d4439b82e729","type":"PanTool"},{"attributes":{},"id":"58314fd9-cd46-4b30-aa8a-531115ec15c5","type":"BasicTicker"},{"attributes":{"active_drag":"auto","active_scroll":"auto","active_tap":"auto","tools":[{"id":"243a6dc9-d0e4-4f45-ae9b-60dd2a65522a","type":"CrosshairTool"},{"id":"aba15120-d510-4056-9d24-d4439b82e729","type":"PanTool"},{"id":"34c765e8-2ca1-4930-bff4-2a4a3ba53ce6","type":"WheelZoomTool"},{"id":"29f51ad8-2aad-4dec-8154-c7a761768e38","type":"BoxZoomTool"},{"id":"a7af8314-6bc0-4589-87cd-7130e349168d","type":"ResetTool"},{"id":"25004027-e2d8-4515-b741-0dfb6206d748","type":"HoverTool"},{"id":"9f1b6567-051b-4713-9f57-32cfb508ae6e","type":"SaveTool"}]},"id":"ebed36a5-0d22-461e-a639-5aa5d181308b","type":"Toolbar"},{"attributes":{"callback":null,"column_names":["y","x","label","size"],"data":{"label":["MTGOX","B7","BCMBM","BCMLR","BCMMB","LYBIT","B2C","ANXHK","BITME","CRYPTOX","BITBOX","INTRSNG","BTCE","WEEX","BITSTAMP","BCMPP","BITFLOOR","BTC24","BTCEX","BTCTREE","EXCHB","FBTC","GLOBAL","IMCEX","RUXUM","THLR","TH","LOCALBTC","COTR","HITBTC","KRAKEN","BITFINEX","JUST","CBX","LAKE","VCX","CRYTR","ROCK","ICBIT","BITKONAN","BITMARKET","ITBIT","1COIN","BITBAY","BITALO","IBWT","COINBASE","EXMO","BITCUREX"],"size":["NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN",13.923557194490526,"NaN",11.9614121389714,"NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN",7.165020746240718,"NaN",0.02668466760738733,1.686102705849082,"NaN","NaN","NaN","NaN","NaN","NaN",0.06934952964843724,"NaN","NaN","NaN",3.3911600225982585,"NaN",0.0005090376142934609,"NaN","NaN",20.0,"NaN",0.1199950032558691],"x":["NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN",608.026804549,"NaN",607.564476684,"NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN",683.058358509,"NaN",608.635852535,610.703393808,"NaN","NaN","NaN","NaN","NaN","NaN",612.565493754,"NaN","NaN","NaN",609.8482964469999,"NaN",629.778105105,"NaN","NaN",610.5108608730001,"NaN",619.01595659],"y":["NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN",5.990000000000009,"NaN",7.850000000000023,"NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN","NaN",3309.24,"NaN",3.4700000000000273,5.597000000000094,"NaN","NaN","NaN","NaN","NaN","NaN",10.779999999999973,"NaN","NaN","NaN",4.860000000000014,"NaN",56.99000000000001,"NaN","NaN",6.300000000000068,"NaN",4.525300000000016]}},"id":"1c84e878-aa64-4cea-a7c1-3193169d33fa","type":"ColumnDataSource"},{"attributes":{"callback":null},"id":"64327cf5-d580-441a-b137-3888ce4bb286","type":"DataRange1d"},{"attributes":{"callback":null,"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"},"tooltips":[["(x,y)","(@x, @y)"],["exchange","@label"]]},"id":"25004027-e2d8-4515-b741-0dfb6206d748","type":"HoverTool"},{"attributes":{"axis_label":"Daily BTC price spread (High-Low)","formatter":{"id":"af31be5c-e82a-4efc-8a4f-c1f1e8a0dbde","type":"BasicTickFormatter"},"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"},"ticker":{"id":"58314fd9-cd46-4b30-aa8a-531115ec15c5","type":"BasicTicker"}},"id":"d0c1d6d7-39e7-48c5-946e-c24eedaca44a","type":"LinearAxis"},{"attributes":{"plot":null,"text":null},"id":"ef84a500-f381-4dbd-ab79-f32bc4900c85","type":"Title"},{"attributes":{"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"}},"id":"34c765e8-2ca1-4930-bff4-2a4a3ba53ce6","type":"WheelZoomTool"},{"attributes":{},"id":"52007f7a-6176-4112-8aa2-bec84735dfd7","type":"BasicTicker"},{"attributes":{"callback":null},"id":"c49566a4-8c56-41d7-994f-4188c6ddf290","type":"DataRange1d"},{"attributes":{"axis_label":"Average daily price (weighted)","formatter":{"id":"713984e5-4249-4519-a73b-c9401853a716","type":"BasicTickFormatter"},"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"},"ticker":{"id":"52007f7a-6176-4112-8aa2-bec84735dfd7","type":"BasicTicker"}},"id":"fde9f4bf-c583-43bd-9710-633cb879ecba","type":"LinearAxis"},{"attributes":{"data_source":{"id":"1c84e878-aa64-4cea-a7c1-3193169d33fa","type":"ColumnDataSource"},"glyph":{"id":"a47e35ad-bab0-451b-a07e-ccc6ea5e9a53","type":"Circle"},"hover_glyph":null,"nonselection_glyph":{"id":"c889ea90-2f94-440d-89e7-23d12f6150bf","type":"Circle"},"selection_glyph":null},"id":"2e24e94c-c756-4838-b6f6-dd1e7706045e","type":"GlyphRenderer"},{"attributes":{"fill_alpha":{"value":0.1},"fill_color":{"value":"#1f77b4"},"line_alpha":{"value":0.1},"line_color":{"value":"#1f77b4"},"size":{"field":"size","units":"screen"},"x":{"field":"x"},"y":{"field":"y"}},"id":"c889ea90-2f94-440d-89e7-23d12f6150bf","type":"Circle"},{"attributes":{"below":[{"id":"fde9f4bf-c583-43bd-9710-633cb879ecba","type":"LinearAxis"}],"left":[{"id":"d0c1d6d7-39e7-48c5-946e-c24eedaca44a","type":"LinearAxis"}],"renderers":[{"id":"fde9f4bf-c583-43bd-9710-633cb879ecba","type":"LinearAxis"},{"id":"e5890c81-7930-4c29-a9d2-6a9b2d31570a","type":"Grid"},{"id":"d0c1d6d7-39e7-48c5-946e-c24eedaca44a","type":"LinearAxis"},{"id":"1297d3ec-f3b7-4911-8b39-f7dc07b6422e","type":"Grid"},{"id":"682fac4d-7716-43c0-b892-538a4b35e703","type":"BoxAnnotation"},{"id":"2e24e94c-c756-4838-b6f6-dd1e7706045e","type":"GlyphRenderer"}],"title":{"id":"ef84a500-f381-4dbd-ab79-f32bc4900c85","type":"Title"},"tool_events":{"id":"b21f027a-6df5-4346-bdac-6e219b892183","type":"ToolEvents"},"toolbar":{"id":"ebed36a5-0d22-461e-a639-5aa5d181308b","type":"Toolbar"},"x_range":{"id":"64327cf5-d580-441a-b137-3888ce4bb286","type":"DataRange1d"},"y_range":{"id":"c49566a4-8c56-41d7-994f-4188c6ddf290","type":"DataRange1d"}},"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"},{"attributes":{"dimension":1,"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"},"ticker":{"id":"58314fd9-cd46-4b30-aa8a-531115ec15c5","type":"BasicTicker"}},"id":"1297d3ec-f3b7-4911-8b39-f7dc07b6422e","type":"Grid"},{"attributes":{"overlay":{"id":"682fac4d-7716-43c0-b892-538a4b35e703","type":"BoxAnnotation"},"plot":{"id":"d8df2bfc-d810-4803-b651-582d2f854f36","subtype":"Figure","type":"Plot"}},"id":"29f51ad8-2aad-4dec-8154-c7a761768e38","type":"BoxZoomTool"},{"attributes":{"fill_alpha":{"value":0.5},"fill_color":{"value":"navy"},"line_alpha":{"value":0.5},"line_color":{"value":"navy"},"size":{"field":"size","units":"screen"},"x":{"field":"x"},"y":{"field":"y"}},"id":"a47e35ad-bab0-451b-a07e-ccc6ea5e9a53","type":"Circle"}],"root_ids":["d8df2bfc-d810-4803-b651-582d2f854f36"]},"title":"Bokeh Application","version":"0.12.2"}};
+        var render_items = [{"docid":"f0155b88-0dca-4f1e-9667-f3402f602991","elementid":"286f89be-5401-4489-ae52-4686b0aea803","modelid":"d8df2bfc-d810-4803-b651-582d2f854f36"}];
+        
+        Bokeh.embed.embed_items(docs_json, render_items);
+    });
+});
+</script>
+			<h4> BTC price on btc-e vs Google trend for the word "Bitcoin" </h4>
+			<IMG WIDTH=50% STYLE="border: none;" SRC="https://s3.amazonaws.com/dataincplots/dataincubplot1_combined.png" ALT="Google trends vs BTC price">
+		</div>
+		</center>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<!--
+<link href="{{ url_for('static', filename='default.css') }}" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url_for('static', filename='fonts.css') }}" rel="stylesheet" type="text/css" media="all" />
+-->
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
+<!-- mpict0: generic bokeh links in head tag. Currently not used - inserted directly in the template -->
+
+    <link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.2.min.css" type="text/css" />
+	<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.2.min.css" type="text/css" />
+	<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.2.min.js"></script>
+	<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.2.min.js"></script>
+	<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-compiler-0.12.2.min.js"></script>
+	<script type="text/javascript">
+		Bokeh.set_log_level("info");
+	</script>
+<script type="text/javascript">
+    
+        (function outer(modules, cache, entry) {
+          if (typeof Bokeh !== "undefined") {
+            for (var name in modules) {
+              var module = modules[name];
+        
+              if (typeof(module) === "string") {
+                try {
+                  coffee = Bokeh.require("coffee-script")
+                } catch (e) {
+                  throw new Error("Compiler requested but failed to import. Make sure bokeh-compiler(-min).js was included.")
+                }
+        
+                function compile(code) {
+                  var body = coffee.compile(code, {bare: true, shiftLine: true});
+                  return new Function("require", "module", "exports", body);
+                }
+        
+                modules[name] = [compile(module), {}];
+              }
+            }
+        
+            for (var name in modules) {
+              Bokeh.require.modules[name] = modules[name];
+            }
+        
+            for (var i = 0; i < entry.length; i++) {
+              Bokeh.Models.register_locations(Bokeh.require(entry[i]));
+            }
+          } else {
+            throw new Error("Cannot find Bokeh. You have to load it prior to loading plugins.");
+          }
+        })({
+         "custom/main":[function(require,module,exports){
+           module.exports = { Custom: require("custom/custom") };
+         }, {}],
+         "custom/custom": "# These are similar to python imports. BokehJS vendors its own versions\n# of Underscore and JQuery. They are available as show here.\n_ = require \"underscore\"\n$ = require \"jquery\"\n\n# The \"core/properties\" module has all the property types\np = require \"core/properties\"\n\n# We will subclass in JavaScript from the same class that was subclassed\n# from in Python\nLayoutDOM = require \"models/layouts/layout_dom\"\n\n# This model will actually need to render things, so we must provide\n# view. The LayoutDOM model has a view already, so we will start with that\nclass CustomView extends LayoutDOM.View\n\n  initialize: (options) ->\n    super(options)\n\n    @render()\n\n    # Set Backbone listener so that when the Bokeh slider has a change\n    # event, we can process the new data\n    #@listenTo(@model.slider, \'change\', () => @render())\n\n  render: () ->\n    # Backbone Views create <div> elements by default, accessible as @$el.\n    # Many Bokeh views ignore this default <div>, and instead do things\n    # like draw to the HTML canvas. In this case though, we change the\n    # contents of the <div>, based on the current slider value.\n    @$el.html(\"<div>#{ @model.text }: </div>\")\n    @$(\'div\').css({ \'color\': \'#000000\', \'background-color\': \'#ffffff\' })\n\nclass Custom extends LayoutDOM.Model\n\n  # If there is an associated view, this is boilerplate.\n  default_view: CustomView\n\n  # The ``type`` class attribute should generally match exactly the name\n  # of the corresponding Python class.\n  type: \"Custom\"\n\n  # The @define block adds corresponding \"properties\" to the JS model. These\n  # should basically line up 1-1 with the Python model class. Most property\n  # types have counterparts, e.g. bokeh.core.properties.String will be\n  # p.String in the JS implementation. Where the JS type system is not yet\n  # as rich, you can use p.Any as a \"wildcard\" property type.\n  @define {\n    text:   [ p.String ]\n  }\n\n# This is boilerplate. Every implementation should export a Model\n# and (when applicable) also a View.\nmodule.exports =\n  Model: Custom\n  View: CustomView"
+        }, {}, ["custom/main"]);
+</script>
+</head>
+    <body>
+        
+		<!-- mpict1: insert plot div and scipt here -->
+		<center>
+		</center>
+ <!--       
+		<form action='macd_plot' method="POST">
+		MACD for Quandl Coinbase database:
+		<input type="text" name="macd_myvar">
+		<input type="submit" name="my-form" value="Send">
+		</form>
+-->		
+    </body>
+</html>
